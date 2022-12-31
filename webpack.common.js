@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    assetModuleFilename: 'assets/[name][ext]'
   },
   module: {
     rules: [
@@ -15,7 +16,11 @@ module.exports = {
           {loader: 'style-loader'},
           {loader: 'css-loader'}
         ]
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: 'asset/resource'
+      },
     ]
   },
 
