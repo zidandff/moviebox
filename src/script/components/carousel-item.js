@@ -14,7 +14,7 @@ class CarouselItem extends HTMLElement {
           <div class="detail-movie col-lg-5">
             <h1 class="title">${this._movie.title}</h1>
             <div class="rating my-3">
-            <img src="${imdbLogo}" alt="imdb rating">
+              <img src="${imdbLogo}" alt="imdb rating">
               ${this._movie.vote_average}
             </div>
             <p class="description">${this._movie.overview}</p>
