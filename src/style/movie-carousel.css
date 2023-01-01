@@ -3,12 +3,16 @@
   height: 80vh;
 }
 
-/* movie slider */
-.movie-carousel .swiper-slide {
+carousel-item {
   position: relative;
+  height: 100%;
 }
 
-.movie-carousel img {
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+}
+
+carousel-item img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -18,19 +22,19 @@
   opacity: .5;
 }
 
-.movie-carousel .detail-movie {
+carousel-item .detail-movie {
   position: absolute;
   z-index: 2;
   transform: translateY(50%);
   color: #ffffff;
 }
 
-.movie-carousel .detail-movie .title {
+carousel-item .detail-movie .title {
   font-size: 48px;
   font-weight: bold;
 }
 
-.movie-carousel .detail-movie .rating {
+carousel-item .detail-movie .rating {
   font-size: 12px;
 }
 
