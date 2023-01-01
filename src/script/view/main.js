@@ -1,30 +1,16 @@
 import '../components/movie-carousel.js'
+import DataSource from '../data/data-source.js';
 
 function main(){
-  const movies = [
-    {
-      // poster : ,
-      title: "John Wick 3: Parabellum",
-      rating: 87,
-      desc: "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
-    },
-    {
-      // poster : ,
-      title: "John Wick 3: Parabellum",
-      rating: 87,
-      desc: "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
-    },
-    {
-      // poster : ,
-      title: "John Wick 3: Parabellum",
-      rating: 87,
-      desc: "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
-    }
-  ];
+  window.addEventListener('DOMContentLoaded', function() {
+    upcomingMovies()
+  })
+}
 
-  const header = document.querySelector('header');
-  const MovieCarouselElement = document.querySelector('movie-carousel')
-  MovieCarouselElement.moviesList = movies
+async function upcomingMovies(){
+  const MovieCarouselElement = document.querySelector('movie-carousel');
+  const dataMovies = await DataSource.getMovies('movie/now_playing');
+  MovieCarouselElement.moviesList = dataMovies.results;
 
 }
 

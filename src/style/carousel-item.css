@@ -1,8 +1,3 @@
-.movie-carousel {
-  width: 100%;
-  height: 80vh;
-}
-
 carousel-item {
   position: relative;
   height: 100%;
@@ -12,7 +7,7 @@ carousel-item {
   background-color: #ffffff;
 }
 
-carousel-item img {
+carousel-item .backdrop {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -25,7 +20,7 @@ carousel-item img {
 carousel-item .detail-movie {
   position: absolute;
   z-index: 2;
-  transform: translateY(50%);
+  transform: translateY(60%);
   color: #ffffff;
 }
 
@@ -36,6 +31,16 @@ carousel-item .detail-movie .title {
 
 carousel-item .detail-movie .rating {
   font-size: 12px;
+}
+
+carousel-item .detail-movie .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: 400px;
 }
 
 .button-trailer {

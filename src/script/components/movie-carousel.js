@@ -1,6 +1,5 @@
 import Swiper from 'swiper/bundle';
 import './carousel-item';
-import '../../style/movie-carousel.css'
 
 export class MovieCarousel extends HTMLElement {
   set moviesList(moviesList){
@@ -11,6 +10,12 @@ export class MovieCarousel extends HTMLElement {
 
   render(){
     this.innerHTML = `
+      <style>
+        .movie-carousel {
+          width: 100%;
+          height: 85vh;
+        }      
+      </style>
       <div class="swiper movie-carousel">
         <div class="swiper-wrapper"></div>
         <div class="swiper-pagination"></div>
