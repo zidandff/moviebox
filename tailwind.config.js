@@ -5,14 +5,15 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        lg: '90px'
+        lg: '80px'
       }
     },
     extend: {
       colors: {
         primary: {
           DEFAULT: '#BE123C',
-          dark: '#9F1239'
+          dark: '#9F1239',
+          light: '#F43F5E'
         }
       }
     },

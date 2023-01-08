@@ -1,0 +1,50 @@
+> {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+}
+
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+
+.header-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.poster {
+  width: 100%
+}
+
+.header-card .media-type {
+  background-color: hsla(220, 14%, 96%, 0.5);
+  border-radius: 15px;
+  padding: 2px 12px;
+  font-size: 14px;
+}
+
+.favorite-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.release-date {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+> .title {
+  font-size: 18px;
+  font-weight: bold;
+}

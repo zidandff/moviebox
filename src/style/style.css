@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+form:has(input:focus) {
+  @apply bg-[rgba(0,0,0,0.1)] ring backdrop-blur-md 
+}
+
 .swiper-pagination-bullet {
   background-color: #ffffff;
 }
 
-form:has(input:focus) {
-  @apply bg-[rgba(0,0,0,0.2)] ring
+.swiper-button-prev,
+.swiper-button-next {
+  color: #FFFFFF;
 }

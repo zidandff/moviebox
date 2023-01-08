@@ -2,7 +2,7 @@ import '../components/movie-carousel.js'
 import DataSource from '../data/data-source.js';
 import '../components/movie-list.js'
 
-const main = ()=> {
+const main = async ()=> {
     nowPlaying();
     trendingMovies();
     upcomingMovies();

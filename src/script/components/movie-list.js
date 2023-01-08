@@ -10,22 +10,6 @@ class MovieList extends HTMLElement {
 
   render(){
     this.innerHTML = `
-      <style>
-          movie-card {
-            width: 250px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            color: #ffffff;
-          }
-
-          .swiper-button-prev,
-          .swiper-button-next {
-            color: #FFFFFF;
-          }
-
-        }      
-      </style>
       <div class="swiper movie-list">
         <div class="swiper-wrapper"></div>
 
