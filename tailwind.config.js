@@ -11,12 +11,14 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#BE123C'
+          DEFAULT: '#BE123C',
+          dark: '#9F1239'
         }
       }
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
   ],
 }

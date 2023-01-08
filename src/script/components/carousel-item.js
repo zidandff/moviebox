@@ -3,24 +3,26 @@ import imdbLogo from '../../assets/imdb.png';
 class CarouselItem extends HTMLElement {
   set movie(movie){
     this._movie = movie;
-    this.classList.add('swiper-slide')
+    this.classList.add('swiper-slide', 'relative', 'h-full')
     this.render();
   }
   
   render(){
     this.innerHTML = `
-        <img class="backdrop" src="https://image.tmdb.org/t/p/w1280${this._movie.backdrop_path}" alt="">
+        <img class="absolute w-full h-full object-cover object-top opacity-50" src="https://image.tmdb.org/t/p/w1280${this._movie.backdrop_path}" alt="">
         <div class="container">
-          <div class="detail-movie col-lg-5">
-            <h1 class="title">${this._movie.title}</h1>
-            <div class="rating my-3">
+          <div class="absolute z-10 top-1/2 -translate-y-[50%] text-white max-w-lg">
+            <h1 class="text-5xl leading-[3.8rem] font-bold line-clamp-2">${this._movie.title}</h1>
+            <div class="text-xs flex my-3">
               <img src="${imdbLogo}" alt="imdb rating">
-              ${this._movie.vote_average}
+              <span class="ml-3">${this._movie.vote_average}</span>
             </div>
-            <p class="description">${this._movie.overview}</p>
-            <button class="btn button-trailer">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM9.5547 7.16795C9.24784 6.96338 8.8533 6.94431 8.52814 7.11833C8.20298 7.29235 8 7.63121 8 8V12C8 12.3688 8.20298 12.7077 8.52814 12.8817C8.8533 13.0557 9.24784 13.0366 9.5547 12.8321L12.5547 10.8321C12.8329 10.6466 13 10.3344 13 10C13 9.66565 12.8329 9.35342 12.5547 9.16795L9.5547 7.16795Z" fill="white"/>/svg>            
-              <span>WATCH TRAILER</span>
+            <p class="line-clamp-3 max-w-xs mb-4">${this._movie.overview}</p>
+            <button class="rounded-md py-3 px-4 bg-primary flex items-center gap-2 text-white font-medium transition hover:bg-primary-dark focus:ring ">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM7.5547 5.16795C7.24784 4.96338 6.8533 4.94431 6.52814 5.11833C6.20298 5.29235 6 5.63121 6 6V10C6 10.3688 6.20298 10.7077 6.52814 10.8817C6.8533 11.0557 7.24784 11.0366 7.5547 10.8321L10.5547 8.83205C10.8329 8.64659 11 8.33435 11 8C11 7.66565 10.8329 7.35342 10.5547 7.16795L7.5547 5.16795Z" fill="white"/>
+              </svg>
+              WATCH TRAILER
             </button>
           </div>
         </div>

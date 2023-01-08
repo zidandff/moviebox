@@ -1,13 +1,9 @@
-carousel-item {
+/* carousel-item {
   position: relative;
   height: 100%;
-}
+} */
 
-.swiper-pagination-bullet {
-  background-color: #ffffff;
-}
-
-carousel-item .backdrop {
+/* carousel-item .backdrop {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -15,25 +11,25 @@ carousel-item .backdrop {
   object-position: center;
   z-index: 1;
   opacity: .5;
-}
+} */
 
-carousel-item .detail-movie {
+/* carousel-item .detail-movie {
   position: absolute;
   z-index: 2;
   transform: translateY(60%);
   color: #ffffff;
-}
+} */
 
-carousel-item .detail-movie .title {
+/* carousel-item .detail-movie .title {
   font-size: 48px;
   font-weight: bold;
-}
+} */
 
-carousel-item .detail-movie .rating {
+/* carousel-item .detail-movie .rating {
   font-size: 12px;
-}
+} */
 
-carousel-item .detail-movie .description {
+/* carousel-item .detail-movie .description {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -56,4 +52,4 @@ carousel-item .detail-movie .description {
 
 .button-trailer:hover {
   background-color: #ac1238;
-}
+} */

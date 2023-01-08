@@ -10,13 +10,7 @@ export class MovieCarousel extends HTMLElement {
 
   render(){
     this.innerHTML = `
-      <style>
-        .movie-carousel {
-          width: 100%;
-          height: 85vh;
-        }      
-      </style>
-      <div class="swiper movie-carousel">
+      <div class="swiper movie-carousel h-[87vh] w-full">
         <div class="swiper-wrapper"></div>
         <div class="swiper-pagination"></div>
       </div>
