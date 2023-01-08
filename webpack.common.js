@@ -3,6 +3,9 @@ const path = require('path');
 
 module.exports = {
   entry: './src/app.js',
+  devServer: {
+    watchFiles: ["src/**/*"],
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

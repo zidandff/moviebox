@@ -14,6 +14,7 @@ class MovieCard extends HTMLElement {
 
   connectedCallback(){
     this.render();
+    this.classList.add('bg-red-500')
   }
 
   render(){

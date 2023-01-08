@@ -1,8 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.html"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: {
+        lg: '90px'
+      }
+    },
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#BE123C'
+        }
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
