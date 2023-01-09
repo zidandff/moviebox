@@ -33,7 +33,7 @@ class MovieList extends HTMLElement {
   renderSwiper(){
     new Swiper('.movie-list', {
       slidesPerView: 4,
-      spaceBetween: 40,
+      spaceBetween: 20,
       autoplay: true,
       navigation: {
         nextEl: '.swiper-button-next',
