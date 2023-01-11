@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 form:has(input:focus) {
-  @apply bg-[rgba(0,0,0,0.1)] ring backdrop-blur-md 
+  @apply bg-[rgba(0,0,0,0.3)] ring backdrop-blur-md 
 }
 
 .swiper-pagination-bullet {
@@ -14,3 +14,20 @@ form:has(input:focus) {
 .swiper-button-next {
   color: #FFFFFF;
 }
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 24px;
+  cursor: pointer;  
+}
+
+.hamburger-menu > div {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: all .25s
+}
+
