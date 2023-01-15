@@ -10,7 +10,7 @@ export class MovieCarousel extends HTMLElement {
 
   render(){
     this.innerHTML = `
-      <div class="swiper movie-carousel h-[100vh] w-full">
+      <div class="swiper movie-carousel aspect-video lg:h-[100vh] w-full">
         <div class="swiper-wrapper"></div>
         <div class="swiper-pagination"></div>
       </div>
@@ -30,7 +30,6 @@ export class MovieCarousel extends HTMLElement {
 
   renderSwiper(){
     new Swiper('.movie-carousel', {
-      direction: 'vertical',
       autoplay: true,
       loop: true,    
       pagination: {

@@ -6,7 +6,6 @@ class TrailerCard extends HTMLElement {
   }
 
   render(){
-    console.log(this._trailer)
     this.innerHTML = `
       <div class="relative aspect-video w-full flex-1">
         <img class="w-full h-full object-cover object-center transition hover:opacity-80" src="https://image.tmdb.org/t/p/w300${this._trailer.backdrop_path}" alt="${this._trailer.title}">

@@ -10,7 +10,7 @@ class CarouselItem extends HTMLElement {
   render(){
     this.innerHTML = `
         <img class="absolute w-full h-full object-cover object-top opacity-50" src="https://image.tmdb.org/t/p/w1280${this._movie.backdrop_path}" alt="">
-        <div class="container">
+        <div class="container hidden md:block">
           <div class="absolute z-10 top-1/2 -translate-y-[50%] text-white max-w-lg">
             <h1 class="text-5xl leading-[3.8rem] font-bold line-clamp-2">${this._movie.title}</h1>
             <div class="text-xs flex my-3">

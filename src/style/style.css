@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-form:has(input:focus) {
-  @apply bg-[rgba(0,0,0,0.3)] ring backdrop-blur-md 
+@layer components {
+  .toggle-search.expand ~ .mobile-search {
+    @apply translate-y-4 opacity-100 pointer-events-auto;
+  }
+
+  .mobile-search {
+    @apply absolute w-full top-full rounded-lg border transition flex justify-between items-stretch border-white pl-4 pr-1 py-1 bg-[rgba(0,0,0,0.3)] backdrop-blur-md opacity-0 -translate-y-full transition duration-300 pointer-events-none
+  }
+
+  form:has(input:focus) {
+    @apply bg-[rgba(0,0,0,0.3)] ring backdrop-blur-md 
+  }
 }
+
 
 .swiper-pagination-bullet {
   background-color: #ffffff;
@@ -30,4 +41,3 @@ form:has(input:focus) {
   background-color: white;
   transition: all .25s
 }
-
