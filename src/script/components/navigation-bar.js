@@ -3,7 +3,6 @@ import brandLogo from '../../assets/Logo.svg';
 class NavigationBar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <nav class="absolute w-full z-10 py-4">
         <div class="container">
           <div class="nav-wrapper w-full flex justify-between items-center relative">
 
@@ -21,7 +20,7 @@ class NavigationBar extends HTMLElement {
             </form>
 
             <a class="navbar-brand md:order-1" href="#">
-              <img src="${brandLogo}" alt="">
+              <img class="h-9" src="${brandLogo}" alt="">
             </a>
 
             <button class="toggle-search md:hidden">
@@ -38,7 +37,6 @@ class NavigationBar extends HTMLElement {
           </div>
           
         </div>
-      </nav>
     `;
 
     // search icon event listener

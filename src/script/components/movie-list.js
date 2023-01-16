@@ -13,8 +13,8 @@ class MovieList extends HTMLElement {
       <div class="swiper movie-list">
         <div class="swiper-wrapper"></div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev hidden lg:block"></div>
+        <div class="swiper-button-next hidden lg:block"></div>
       </div>
     `;
 
@@ -32,13 +32,21 @@ class MovieList extends HTMLElement {
 
   renderSwiper(){
     new Swiper('.movie-list', {
-      slidesPerView: 4,
+      slidesPerView: 1.3,
       spaceBetween: 20,
       autoplay: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.5,
+        },
+        1024: {
+          slidesPerView: 4,
+        }
+      }
     });
   }
 

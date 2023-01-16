@@ -13,8 +13,8 @@ class TrailerList extends HTMLElement {
       <div class="swiper trailer-list">
         <div class="swiper-wrapper"></div>
         
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev hidden lg:block"></div>
+        <div class="swiper-button-next hidden lg:block"></div>
       </div>
     `
     this.renderTrailerCard();
@@ -31,14 +31,21 @@ class TrailerList extends HTMLElement {
 
   renderSwiper(){
     new Swiper('.trailer-list', {
-      slidesPerView: 3.5,
+      slidesPerView: 1.2,
       spaceBetween: 20,
       autoplay: true,
-      // centeredSlides: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.3,
+        },
+        1024: {
+          slidesPerView: 3.5,
+        }
+      }
     })
   }
 }
